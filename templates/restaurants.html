@@ -1,0 +1,22 @@
+<html>
+
+<body>
+
+    <h1>Restaurants</h1>
+
+    <a href='#'>Create New Restaurant</a>
+    
+    {% if restaurants !=[] %} 
+        {% for r in restaurants %}
+        
+            <h3>{{r.name}}</h3>
+            <p><a href="#">Edit</a></p>
+            <p><a href="#">Delete</a></p>
+
+        {% endfor %}
+    {% else %}
+        <p>You currently have no restaurants.</p>
+    {% endif %}
+</body>
+
+</html>
