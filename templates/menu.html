@@ -4,13 +4,14 @@
 
 	<h1>{{restaurant.name}}</h1>
 
-	<a href='#'>Create New Item</a>
+	<a href="{{url_for('newMenuItem', restaurant_id=restaurant.id)}}">Create New Item</a>
 
 	{% if items !=[] %} 
 		{% for i in items %}
 
 			<h3>{{i.name}}</h3>
 			<p>{{i.description}}</p>
+			<p>{{i.price}}</p>
 			<p><a href='#'>Edit</a></p>
 			<p>	<a href='#'>Delete</a></p>
 		
